@@ -8,10 +8,17 @@ function main(){
     let i = 1
     let r = 0
     for (; i <= n; i++){
-        r += numerador / denominador
-        
+        denominador -= 1
+        numerador += 1
+       if (i % 2 == 0){
+            r -= denominador/numerador
+            
+        }else{
+            
+            r += numerador / denominador
+        }      
     }
-    console.log(`Resultado da operação é ${s.toFixed(2)}`)
+    console.log(`Resultado da operação é ${r.toFixed(2)}`)
 }
 
 main()
